@@ -1,0 +1,229 @@
+.chats-body {
+  min-height: 1000vh;
+  background-image: url("../css/image/memphis-colorful.png");
+}
+
+.header-wrapper {
+  position: fixed;
+  padding: 10px 0px;
+  background-color: white;
+  top: 0px;
+  width: 100%;
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.3),
+    0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+.chats-body {
+  padding: 10px 0px;
+  padding-top: 100px;
+}
+
+.chats-body .status-bar,
+.chats-body .header {
+  padding: 0px 20px;
+}
+
+.chat__write-contaner {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  }
+  50% {
+    box-shadow: 0 13px 27px -50px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  }
+  100% {
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  }
+}
+
+.chat__write {
+  margin: 0 auto;
+  bottom: 0px;
+  width: 100%;
+  border-radius: 0;
+  padding: 10px 60px;
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  transition: width 0.5s ease-in, border-radius 0.5s ease-in,
+    transform 0.5s ease-in;
+}
+
+.chat__write:focus {
+  outline: none;
+  width: 80%;
+  margin: 0 auto;
+  transform: translateY(-100px);
+  border-radius: 40px;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  animation: float 3s linear infinite forwards;
+}
+
+.chat__write:focus ~ .chat__icon {
+  opacity: 0;
+}
+
+.chat__icon-left {
+  position: absolute;
+  left: 10px;
+}
+
+.chat__icon-right {
+  position: absolute;
+  right: 10px;
+}
+
+.chat__icon {
+  font-size: 18px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.chat__write i {
+  font-size: 22px;
+}
+
+.chat__write-column:nth-child(2) {
+  width: 80%;
+}
+
+.chat__write-column input {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  font-size: 14px;
+}
+
+.chat-screen .chat__messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  border-top: 1px solid #f7f7f7;
+  padding: 0px 20px;
+  padding-top: 30px;
+}
+
+.chat__messages .chat__timestamp {
+  background-color: white;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  text-transform: uppercase;
+  color: #2a5298;
+  font-weight: 700;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.message .message__content {
+  width: 80%;
+}
+
+.incoming-message {
+  align-self: flex-start;
+  margin-right: 15px;
+}
+
+.sent-message {
+  align-self: flex-end;
+  margin-left: 15px;
+}
+
+@keyframes spin {
+  form {
+    transform: none;
+  }
+  to {
+    transform: rotateY(2turn);
+  }
+}
+
+.incoming-message img {
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+  margin-right: 20px;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  animation: spin 1.5s linear;
+}
+
+.message__content .message__bubble {
+  background-color: white;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  padding: 10px 20px;
+}
+
+.incoming-message .message__bubble {
+  border-radius: 30px 30px 30px 0px;
+  color: white;
+  background-image: linear-gradient(to right, #9d50bb, #6e48aa);
+  font-size: 14px;
+}
+
+.sent-message .message__bubble {
+  border-radius: 30px 30px 0px 30px;
+  color: white;
+  background-image: linear-gradient(to right, #1e3c72, #2a5298);
+  font-size: 14px;
+}
+
+.incoming-message .message__author {
+  margin-top: 10px;
+  display: block;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.incoming-message {
+  animation: inani 0.5s ease-in forwards;
+}
+
+@keyframes inani {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.sent-message {
+  animation: sentani 0.5s ease-out forwards;
+}
+
+@keyframes sentani {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}

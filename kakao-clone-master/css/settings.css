@@ -1,0 +1,18 @@
+.settings .settings__sections {
+  padding-top: 25px;
+  border-top: 1px solid #f7f7f7;
+}
+
+.settings__setting .setting__icon {
+  font-size: 22px;
+  margin-right: 20px;
+}
+
+.setting__list .settings__setting {
+  margin-bottom: 25px;
+}
+
+.settings__setting .setting__title {
+  font-size: 22px;
+  font-weight: 400;
+}
