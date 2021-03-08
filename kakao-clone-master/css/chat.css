@@ -132,7 +132,8 @@
 
 .message {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   width: 50%;
   margin-bottom: 20px;
 }
@@ -226,4 +227,13 @@
     opacity: 1;
     transform: none;
   }
+}
+
+.btn__delete {
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  margin-left: 10px;
+  color: red;
+
 }

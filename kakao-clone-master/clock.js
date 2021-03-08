@@ -1,5 +1,6 @@
-const clockContainer = document.querySelector(".status-bar_column"), 
-    clockTitle = clockContainer.querySelector("span");
+const clockContainer = document.querySelector(".status-bar_column"),
+    clockTitle = clockContainer.querySelector("span"),
+    timestamp = document.querySelector(".chat__timestamp");
 
 
 function getTime() {
@@ -8,6 +9,7 @@ function getTime() {
     const minutes = date.getMinutes();
     // const seconds = date.getSeconds();
     clockTitle.innerText = `${hour < 10 ? `0${hour}` : hour}:${minutes < 10 ? `0${minutes}` : minutes}`;
+    timestamp.innerText = `${date}`;
 }
 
 function init(){
@@ -16,4 +18,3 @@ function init(){
 }
 
 init();
-
